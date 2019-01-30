@@ -1,0 +1,11 @@
+declare
+begin
+  IF( NULL=3)=true THEN
+    DBMS_OUTPUT.PUT_LINE('TRUE');
+  elsif ( NULL=3)=false THEN
+    DBMS_OUTPUT.PUT_LINE('FALSE');    
+  ELSE
+    DBMS_OUTPUT.PUT_LINE('LOL');
+  END IF;
+end;
+/
