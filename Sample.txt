@@ -1,0 +1,9 @@
+declare
+   name emp.empno%type;
+begin
+   name:='Pranay';
+   dbms_output.put_line('My name is '||name);
+exception
+   when others then dbms_output.put_line('Error while printing the name');
+end;
+/

@@ -1,0 +1,10 @@
+create or replace function print_boolean(valu in boolean)
+return varchar2 is
+begin
+  return
+  case valu
+    when true then 'TRUE'
+    when false then 'FALSE'
+    else 'NULL'
+  end;
+end;

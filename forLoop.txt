@@ -1,0 +1,8 @@
+declare 
+  a number(10):=20;
+begin 
+  for lol in reverse 1..a loop
+    dbms_output.put_line(lol||' lol');
+  end loop;
+end;
+/

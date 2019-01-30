@@ -1,0 +1,13 @@
+declare 
+  dept1 emp.ename%type;
+begin
+  select deptno into dept1 from emp where empno=7698;
+  if(dept1=10) then 
+            dbms_output.put_line('COMMON_DEPARTMENT');
+  elsif(dept1 is not null) then 
+            dbms_output.put_line(dept1);
+  else
+            dbms_output.put_line('NO_DEPARTMENT');
+  end if;
+end;
+/
