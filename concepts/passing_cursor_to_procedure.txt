@@ -1,0 +1,21 @@
+declare
+    type emp_curr_type is ref cursor;
+    emp_curr_type_var emp_curr_type;
+    
+    procedure empProcedure(emp_curr in emp_curr_type ) is
+        type rec is record(
+             name emp.ename%type
+        );
+        emp_curr_var rec;
+    begin
+       fetch emp_curr into emp_curr_var;
+       dbms_output.put_line(emp_curr_var.name);
+    end empProcedure;
+
+
+begin
+  open emp_curr_type_var for select ENAME  from emp;
+  empProcedure(emp_curr_type_var );
+  close emp_curr_type_var ;
+end;
+/
