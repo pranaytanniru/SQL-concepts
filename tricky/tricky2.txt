@@ -1,0 +1,9 @@
+--Finding nth largest salary in emp table using sql
+
+SELECT *
+FROM   (SELECT sal,
+               Row_number()
+                 OVER (
+                   ORDER BY sal DESC)"NUMB"
+        FROM   emp)
+WHERE  numb = '&enter_the_number';
