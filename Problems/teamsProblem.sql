@@ -1,11 +1,12 @@
 Input : Given a table TEAMS
-TEAMS:
-------
-  IND
-  AUS
-  ENG
-  USA
-  EUR
+    TEAMS
+  ---------
+    AUS
+    ENG
+    EUR
+    IND
+    USA
+
 Output:Write a SQL query to print a view in such a way that
   Every team should play with every other opponent exactly once.
     MATCHES
